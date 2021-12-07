@@ -1,0 +1,751 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>촬영 가이드라인 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="34a1d061-9b02-4525-a363-164973ed479b" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🍋</span></div><h1 class="page-title">촬영 가이드라인 </h1></header><div class="page-body"><h3 id="91f6fe6b-6b2a-4d2f-923d-68391c2ddb38" class="block-color-teal_background">☀🌞‼공통 가이드(필히 지켜주세요!!)‼🔶🔆 </h3><p id="37e380f0-9586-4874-8024-df2e1f4e7761" class="block-color-teal_background">1️⃣ 배경은 사진을 <strong><span style="border-bottom:0.05em solid">좌우 반전 할 때 문제되지 않아야 해요!</span></strong>
+     ❌ 글씨나 그림이 그려져 있다면 주의해주세요!  
+
+2️⃣ ⭕ 촬영은 반드시 RAW파일로 촬영해 주세요!  
+
+3️⃣ 모든 사진은 <strong>촬영 부분이 사진상 중심 부분에 위치하도록 촬영</strong>해주세요🔳🔷📷
+
+️4️⃣ 사진은 자사의 자산으로 촬영됩니다.
+     귀한 저희의 제품을 소중히 다뤄주세요! </p><div id="31b305d8-38ad-4b99-b43a-d086d32a9134" class="column-list"><div id="652403ea-5950-4712-9bb2-b22830c23cb1" style="width:56.25%" class="column"><ul id="6f557775-570b-46ab-8fd4-a48adbe684d7" class="toggle"><li><details open=""><summary>촬영 전 휴대폰 셋팅 방법 
+(왼쪽 ▶를 클릭해 펼쳐보세요👆) </summary><ol type="1" id="f4a46461-1142-48f3-8e06-18675cd6d7e1" class="numbered-list" start="1"><li><strong>RAW 활성화</strong>
+아이폰 카메라 앱을 켜 보시면 우측 상단에 <strong><code>RAW</code></strong>  버튼이 있습니다.
+혹시 이 버튼이 활성화 되어 있지 않으면, 클릭해서 <strong><code>RAW</code></strong><strong>를 활성화 해주세요!</strong></li></ol><figure id="6da222b5-03a9-48a0-9f29-d97ed877cbe4" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled.png"><img style="width:288px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled.png"/></a><figcaption>&lt;사진1&gt;                                &lt;사진2&gt;</figcaption></figure><p id="a93ff478-417d-4487-8e31-83c99f1473cf" class="">
+</p><p id="9c4206c8-a820-4545-ac8e-d507e2fd72f5" class="">
+</p><p id="30212652-c26b-4fa9-a103-17fe04fbea7a" class="">
+</p><ol type="1" id="343a873f-71a7-4386-a4e9-3771d12d0684" class="numbered-list" start="3"><li><strong>동영상 기능 또는 동영상 캡쳐 기능을 사용하세요 .</strong>
+혹시 사진 찍는 게 어색하시다면 
+<strong>동영상 기능을 이용</strong>해 보세요!
+동영상 캡쳐 기능을 사용하시면 
+더욱 자연스러운 사진을 얻을 수 있어요 😉
+(옆 동영상을 참고하세요.)</li></ol></details></li></ul></div><div id="87a47e47-5f31-4bde-a9f2-9f25ab12feef" style="width:43.75%" class="column"><p id="d5597e32-f035-40d5-961a-b2bf796c1e09" class="">
+</p><ol type="1" id="a3c705f9-b26f-4bb0-8245-55dda31a7543" class="numbered-list" start="2"><li><strong>비율변경 → 16: 9</strong> 
+사진3의 1️⃣ 은 &lt;사진 1, 2&gt;와 모양이 달라요!
+해당 버튼을 클릭하면 2️⃣번 버튼을 보실 수 있어요.
+3️⃣의  <strong><code>16:9</code></strong><strong>로 비율을 바꿔 주세요!</strong><figure id="a93e43d8-dac5-4ef8-a472-dccbb3ce52a7" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%201.png"><img style="width:192px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%201.png"/></a><figcaption>&lt;사진3&gt;</figcaption></figure></li></ol><figure id="2cf541cf-d76a-476b-8f72-f4e2a79619bd"><div class="source"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/face_tutorial_small.mp4">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54929442-6a8d-445a-90cd-d9b4875da622/face_tutorial_small.mp4</a></div></figure></div></div><p id="1d622af7-e052-4baa-b81e-1229d7b8d68d" class="">
+</p><hr id="02a55014-4db3-45ca-84ca-6b49e028997c"/><p id="a4a6bbd5-d741-4a91-b4d9-d1f73941f8a5" class="">
+</p><ul id="63642c2a-68cc-4a4f-af5b-8e7d98f84fe9" class="toggle"><li><details open=""><summary>귀걸이(안경) _ 왼쪽 ▶를 클릭해 펼쳐보세요</summary><p id="8ad311ac-3063-4526-ac0c-e011a7c7f590" class="block-color-gray_background">❗ <strong>Notice</strong>
+1️⃣ 귀걸이, 안경을 착용했다고 생각하고 카메라를 자연스럽게 응시하며 촬영해주세요.📷
+
+2️⃣️️ 증명사진같은 완전 정면 사진보다는 살짝 각도를 틀어 찍어주시는 게 자연스럽더라구요
+     편하게 셀카 찍듯이 찍어주시면 돼요!🍭
+
+3️⃣️ 제일 중요한 포인트는 <span style="border-bottom:0.05em solid"><strong>귀가 잘 보이는 거</strong></span>예요! 
+     손으로 얼굴을 감싸거나 가리는 등의 포즈는 지양해주세요.
+     (특히, 머리카락으로 귀를 많이 가리지 말아주세요🤭❌) 
+
+4️⃣️ 귀걸이, 피어싱, 안경 등의 악세사리는 착용하지 않으신 상태로 찍어주셔야 해요! 
+
+5️⃣ 모델분의 전체가 얼굴각도나 촬영부위 등은 아래 사진을 참고해주세요🙎‍♀️🙍🏾‍♀️🧝‍♂️🙎🏾‍♀️🙍🏼‍♀️
+     <strong>얼굴과 머리카락을 포함한 실루엣이 사진에 전부 담길 수 있도록</strong> 부탁드려요 💄💍💎 
+</p></details></li></ul><h3 id="3d1e3aa7-7b74-4760-bc69-11b6aa4205cf" class="">귀걸이를 위한 사진을 찍으실때는 아래 사진을 참고해 주세요🙏</h3><div id="8c5f1fa7-0bbb-4279-a55c-648e91d89125" class="column-list"><div id="e2e8abca-39f3-4cf3-b670-a1905947c33a" style="width:50%" class="column"><figure id="0513764b-8e1c-4355-8926-557ae2a97558" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%202.png"><img style="width:351px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%202.png"/></a></figure><figure id="3746d1b7-7ad9-4268-9236-f01b5a217ebf" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%203.png"><img style="width:506px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%203.png"/></a></figure></div><div id="2f904268-80ec-4f88-ad71-02cb749d9aa3" style="width:50%" class="column"><figure id="d9bbdd20-e7ac-4595-a352-fa6d3cdaaa4c" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%204.png"><img style="width:1299px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%204.png"/></a></figure><figure id="45866a39-d00f-480f-9500-5343086c9747" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%205.png"><img style="width:491px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%205.png"/></a></figure></div></div><p id="5329036e-13f0-4a0c-9c74-cdf828d19dcb" class="">
+</p><hr id="608cb003-377f-421e-88f9-90252d81ebe3"/><p id="df185ee0-e667-4030-a196-56e7bb50b2b1" class="">
+</p><ul id="c6a552a8-4314-41b1-8a25-e7a736c91aad" class="toggle"><li><details open=""><summary>반지_ 왼쪽 ▶를 클릭해 펼쳐보세요</summary><p id="4d4dbd83-9f2c-4d72-b75e-fc4bc11ad3e8" class="block-color-gray_background">❗ <strong>Notice</strong>
+1️⃣ 손가락의 <strong>방향 및 각도는 참고 이미지를 보고 촬영</strong>해 주세요!
+
+2️⃣️️ 되도록이면 왼손을 위주로 촬영해 주세요(왼손잡이인 경우는 편하신 손으로 촬영해주세요)
+
+3️⃣️ <strong>손가락은 자연스럽게 벌어지도록 촬영해주세요!  </strong>🖐
+
+4️⃣️ 손을 촬영하실 때는 변화를 주는 폭이 적어요! 🌄🌇
+      손 자체보다는 손 뒤에 배경에 변화를 준다고 생각하시고 사진을 찍어주시면 좋아요 ❤
+
+5️⃣ ❌ 네일아트 등은 하지 않으신 상태여야 합니다! 💅</p><h3 id="edcd73d7-3530-4f96-aa9f-5f384e12a54b" class="">반지를 위한 사진을 찍으실때는 아래 사진을 참고해 주세요🙏
+</h3><figure id="c3778eb5-34c6-45f6-a8b9-96ee04c68dde" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%206.png"><img style="width:720px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%206.png"/></a></figure></details></li></ul><div id="915ab31d-c041-4639-ae1d-c17810bc5789" class="column-list"><div id="50fddfe2-8f2a-41dd-93a6-ff27f4be6905" style="width:50%" class="column"><figure id="bf710c56-27c8-43f0-bcf8-59ba6f254196" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%207.png"><img style="width:491px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%207.png"/></a></figure></div><div id="b77b5b5a-3634-499c-8a3a-8f0ed95e98a1" style="width:50%" class="column"><figure id="ed0d5b16-c15d-43db-8a07-cc1440d2cbe6" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%208.png"><img style="width:494px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%208.png"/></a></figure></div></div><div id="c7e27719-3fb4-436e-8aef-31ba1bf1f495" class="column-list"><div id="31d06409-198e-44ff-9acd-d33828a9b1cd" style="width:50%" class="column"><figure id="5b63e5fe-03e2-41d3-aa12-08b1ff1daf67" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%209.png"><img style="width:1314px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%209.png"/></a><figcaption><strong>가능 : 좌우반전시 배경에 문제 없음
+(네일아트 등은 하지 않은 상태여야 함) </strong></figcaption></figure></div><div id="4c8de016-dd2a-4a98-824b-dd52534d6d76" style="width:50%" class="column"><figure id="fc39d1de-659b-47f0-ab82-89a32444abef" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2010.png"><img style="width:1317px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2010.png"/></a><figcaption><strong>불가 : 좌우반전시 배경에 글씨(VE YOU)가 함께 반전
+(네일아트 등은 하지 않은 상태여야 함)</strong></figcaption></figure></div></div><hr id="e938bd1d-f8f5-4b9f-bb58-e78b9ae89603"/><p id="751a5248-0baa-4664-84af-fdec495b2a71" class="">
+</p><p id="7aaf279b-12b5-4983-98bb-98ec8993d6d7" class="">
+</p><ul id="18384149-03c8-4d4d-bf3f-f7769eb7a7fa" class="toggle"><li><details open=""><summary>팔찌(시계)_ 왼쪽 ▶를 클릭해 펼쳐보세요</summary><p id="427d5bd3-8cdc-4fa0-9881-1b0fbb4a8eb6" class="block-color-gray_background">❗ <strong>Notice</strong>
+1️⃣ 시계와 팔찌를 착용했다고 생각하고 <strong>팔목이 잘 보이게</strong> 찍어주세요📷 
+     (팔찌보다는 시계를 착용했고, 시계와 팔목을 탑뷰로 찍는다고 생각하시면 사진이 잘 나와요!)
+
+2️⃣️️ 손 모양은 편하신대로 취해주세요 😆
+
+3️⃣️ ⭕<strong>팔목은 반드시 정면에서 찍어주세요! </strong>
+
+4️⃣️ 팔목(손목)을 촬영하실 때는 변화를 주는 폭이 적어요! 🌄🌇
+      뒷 배경에 변화를 준다고 생각하시고 사진을 찍어주시면 좋아요 ❤
+</p><h3 id="a2a2bb53-d72f-4eac-9ca4-06bfd6d31791" class="">팔찌를 위한 사진을 찍으실때는 아래 사진을 참고해 사진을 찍어주세요🙏</h3><p id="fe19e04f-a91d-41f0-9ad2-a85eaf78b0e4" class="">
+</p><figure id="ae8cb14b-6b4e-4c72-800a-ed953a8160f1" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2011.png"><img style="width:1840px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2011.png"/></a><figcaption><strong>  가능 : 손목이 정면이며 사진의 중앙임                          불가: 손목은 중심에 가깝게 위치하나 정면이 아님</strong></figcaption></figure><p id="9398bf93-d746-47e7-983b-126192c34a0b" class="">
+</p></details></li></ul><hr id="05a37beb-9a6e-4d93-a263-afd447331776"/><p id="773b4abb-f511-462c-a005-4c153297fc96" class=""> </p><ul id="53c76e6e-2d08-4262-b86e-7750d50af533" class="toggle"><li><details open=""><summary>네일_ 왼쪽 ▶를 클릭해 펼쳐보세요</summary><p id="cd772d87-c418-4054-98f7-03afbe3e5670" class="block-color-gray_background">❗ <strong>Notice</strong>
+1️⃣ 이왕이면 모든 손톱이 잘 나오도록 촬영해 주세요📷 ! 
+      엄지나 소지(새끼손가락)의 손톱이 잘 보이지 않는 경우가 많습니다 😥
+      <strong>모든 쉐입이 나오지 않은 손톱은 차라리 보이지 않는 편이 더 좋아요 !</strong>
+
+2️⃣️️ 손은 양손이 아니라 <strong>한 손만 나오도록 촬영</strong>해 주세요!🙏
+
+3️⃣ 손을 가리거나 잘리지 않게, <strong>되도록이면 전체가 보이도록 촬영</strong>해 주세요! 
+
+4️⃣ 배경 및 소품으로 사용하는 물체는 손과 손톱의 색과 경계가 뚜렷해야 해요!
+      화려한 배경, 소품은 되도록이면 삼가해주세요 😉 
+
+5️⃣️ ❌ <strong>투명케어나 네일아트는 괜찮지만, 파츠 등은 불가합니다!</strong> 💅 
+
+️6️⃣ 네일이 가장 까다로울수도, 가장 쉬울 수도 있는 부분인데요.
+     레퍼런스 이미지를 많이 참고해 주세요🤞👍🎀
+     (보시고 궁금하신 부분은 말씀해 주세요)
+     </p><p id="8e48c959-8c63-4a16-915b-1fc9b9201b64" class="">
+</p><h3 id="8bdf86d5-5fff-4da9-94e2-696f5d382885" class="">네일을 위한 사진을 찍으실때는 아래 사진을 참고해 사진을 찍어주세요🙏</h3></details></li></ul><div id="c7cbfd13-4858-4713-988f-b5b7e846d3f0" class="column-list"><div id="413dbea9-ca37-4299-ab5a-f4710b4784ee" style="width:50%" class="column"><figure id="2ac9510a-e8b1-47a5-b25d-594bd0a535c1" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2012.png"><img style="width:432px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2012.png"/></a></figure><figure id="5dceecc3-a9c6-4002-b53e-0b86b86901d3" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2013.png"><img style="width:1440px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2013.png"/></a></figure></div><div id="edea065d-c115-4369-b4aa-1c6510a5798b" style="width:50%" class="column"><figure id="f9530a24-4852-4e73-9599-100df079d337" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2014.png"><img style="width:498px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2014.png"/></a></figure><figure id="43d52ed1-e9f2-4b5d-9969-bc3e1a5279bc" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2015.png"><img style="width:1170px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2015.png"/></a></figure></div></div><h2 id="9bccaa54-d8e1-4196-8dab-26631cacff7c" class="block-color-red">       —————————————————————————</h2><h3 id="5815563d-5961-441b-81d5-d9cfaccb3572" class="">                ❌이런사진은 안돼요! (이유를 같이 읽어봐 주세요!)❌ </h3><div id="7f9df44f-a8e4-4adb-a249-4cf24bfac380" class="column-list"><div id="a04e69bb-ce5c-45a8-b0e5-d6facb41f073" style="width:50.000000000000014%" class="column"><figure id="4afa2876-5bc9-4d44-bb0d-6a6742c49cbf" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2016.png"><img style="width:1525px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2016.png"/></a><figcaption><strong>불가 : 다섯손톱은 선명히 보이나 손 전체가 사진에 담겨있지 않음</strong></figcaption></figure><figure id="6447ba59-1259-47cb-9879-d4a51da6519a" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2017.png"><img style="width:240px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2017.png"/></a><figcaption><strong>불가 : 빨간 네모안 손톱이 애매하게 보이고
+          배경이 화려함</strong></figcaption></figure></div><div id="6abd650c-4c59-4596-9c13-38c9d71c7c2a" style="width:50.000000000000014%" class="column"><figure id="41c0bd1c-e3c0-4da2-a05b-0e9983a64e5c" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2018.png"><img style="width:492px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2018.png"/></a><figcaption><strong>불가 : 손톱이 애매하게 보임
+</strong></figcaption></figure><figure id="d3843c41-1794-4f22-8c09-588015fdff29" class="image"><a href="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2019.png"><img style="width:497px" src="%E1%84%8E%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB%2034a1d0619b024525a363164973ed479b/Untitled%2019.png"/></a><figcaption><strong>불가 : 다섯손톱이 선명히 보이나 손을 가림</strong></figcaption></figure></div></div><hr id="333c5089-7d1d-4b2a-9abd-7f417c3b70a7"/><p id="1e5f9806-8316-4f0c-b800-a206d93161f4" class=""> </p><p id="ccd4a173-2db0-45d3-9cb0-52cef30cadfb" class="">이 외 궁금하신 사항에 대해서는 아래 연락처로 편하게 문의 주세요!</p><div id="5dba61da-098d-4261-98e9-dfcaf7fe5ede" class="column-list"><div id="9c132d8b-3408-4555-9bd3-986dbd0f1568" style="width:68.75%" class="column"><p id="508901a5-c85d-479e-b999-c490da9d0631" class="block-color-purple_background">
+🎅<strong>담당자 연락처</strong>🤶<strong>
+</strong>
+☎️                                                          ✉️
+태근님(Kei) : 010 - 5459 - 0001 /  kei.park@deepixel.xyz
+윤님            : 010 - 2213 - 3895 /  yoon.park@deepixel.xyz
+  </p></div><div id="5ad06f44-cbeb-4eef-afe5-5d5b0ea6f35b" style="width:31.249999999999993%" class="column"><p id="1dcc9175-243e-4e79-8d71-179deb4b9965" class=""> </p></div></div><p id="5ea49cc7-a31f-4434-bc0c-46e75ab58470" class="">
+</p></div></article></body></html>
