@@ -1,8 +1,5 @@
 # StyleAR_Tutorial
 A tutorial on how to use stylear
-[link](https://htmlpreview.github.io/?https://github.com/deepixel16/StyleAR_Tutorial/blob/30e90af88cbc7b368eb38084c16b6caa1449b5c0/Model%20of%20Deepixel%20d7449e057b5d42f0832171413e91671a.html)
-
-[link](https://htmlpreview.github.io/?https://github.com/deepixel-inc/StyleAR_Tutorial/blob/main/Model%20of%20Deepixel%20d7449e057b5d42f0832171413e91671a.html)
 
 [딥픽셀 및 서비스 소개](https://htmlpreview.github.io/?https://github.com/deepixel-inc/StyleAR_Tutorial/blob/main/Model%20of%20Deepixel%20d7449e057b5d42f0832171413e91671a/%EB%94%A5%ED%94%BD%EC%85%80%20%EB%B0%8F%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%86%8C%EA%B0%9C%20e4a49e7d25c44ea38d13d1297615b51a.html)
 
